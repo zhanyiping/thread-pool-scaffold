@@ -35,6 +35,10 @@ public class BusinessResult<T> {
         return this.status;
     }
 
+    public static <T> BusinessResult<T> createBusinessResult(T result) {
+        return new BusinessResult(true ,"成功" ,result);
+    }
+
     /**
      * 成功
      */
@@ -58,5 +62,25 @@ public class BusinessResult<T> {
      */
     public static BusinessResult getFail(){
         return fail;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public T getResult() {
+        return result;
+    }
+
+    public void setResult(T result) {
+        this.result = result;
     }
 }

@@ -3,11 +3,13 @@ package cn.zhanyiping.thread.task.query;
 import cn.zhanyiping.thread.CustomThreadPool;
 import cn.zhanyiping.thread.domian.BusinessResult;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
 
 /**
  * 执行线程池中的任务
@@ -17,9 +19,13 @@ import java.util.concurrent.ExecutorCompletionService;
 public class QueryTaskExecute {
 
     /**
-     * 连接池
+     * 线程池
      */
-    private final CompletionService<BusinessResult> completionService = new ExecutorCompletionService<>(CustomThreadPool.getExecutorService());
+    private final static ExecutorService executorService =  CustomThreadPool.getExecutorService();
+    /**
+     * 快速获取结果
+     */
+    private final CompletionService<BusinessResult> completionService = new ExecutorCompletionService<>(executorService);
 
     /**
      * 保存执行任务的链表
