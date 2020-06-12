@@ -8,16 +8,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 创建线程的工程类
  * 构造线程的名称，并且在异常时进行打印
- * create by zhanyiping on 2019/4/1
+ * create by zhanyiping
  */
 @Slf4j
-public class MyThreadFactory implements ThreadFactory {
+public class CustomThreadFactory implements ThreadFactory {
 
     private final AtomicInteger threadNumber = new AtomicInteger(1);
 
     private  String threadNamePrefix;
 
-    MyThreadFactory(String threadNamePrefix) {
+    CustomThreadFactory(String threadNamePrefix) {
         this.threadNamePrefix = threadNamePrefix ;
     }
 

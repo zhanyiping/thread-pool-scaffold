@@ -8,10 +8,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 自定义线程池策略，基于ThreadPoolExecutor.CallerRunsPolicy策略增加执行者线程的描述日志
- * Created by zhanyiping on 2019/4/1.
+ * Created by zhanyiping
  */
 @Slf4j
-public class MyThreadPoolPolicy implements RejectedExecutionHandler {
+public class CustomThreadPoolPolicy implements RejectedExecutionHandler {
     /**
      * 调用者运行策略(线程池提供) 当前线程执行
      */

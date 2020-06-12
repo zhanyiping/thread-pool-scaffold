@@ -1,5 +1,9 @@
 package cn.zhanyiping.thread.domian;
 
+/**
+ * 业务结果信息类
+ * @param <T> 返回信息中的数据信息
+ */
 public class BusinessResult<T> {
 
     /**

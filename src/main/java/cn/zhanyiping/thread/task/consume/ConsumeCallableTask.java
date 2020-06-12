@@ -8,12 +8,12 @@ import java.util.concurrent.Callable;
 /**
  * 任务的实现类 创建的任务需要继承该类
  * 适用于消费和回滚模型的任务
- * create by zhanyiping on 2019/4/1
+ * create by zhanyiping
  */
 public abstract class ConsumeCallableTask implements Callable<BusinessResult> {
 
     @Override
-    public BusinessResult call() throws Exception {
+    public BusinessResult call() {
         return consume();
     }
 
