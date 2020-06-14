@@ -1,16 +1,12 @@
 package cn.zhanyiping.test.consume.domain;
 
-import cn.zhanyiping.test.query.domain.QueryProductDomain;
-import cn.zhanyiping.test.query.domain.QueryStoreDomain;
-import cn.zhanyiping.test.query.domain.QueryUserDomain;
 import lombok.Data;
 
 @Data
 public class ConsumeCommonDomain {
 
-    private QueryUserDomain userDomain;
+    private ConsumeUserDomain userDomain = new ConsumeUserDomain("user", 1000);
 
-    private QueryProductDomain productDomain;
+    private ConsumeProductDomain productDomain = new ConsumeProductDomain("手机", 500);
 
-    private QueryStoreDomain storeDomain;
 }
